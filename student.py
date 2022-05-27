@@ -1,10 +1,13 @@
 class Student:
     school="AkiraChix"
-    def __init__(self,name,age,country):
-        self.name=name
+    def __init__(self,first_name,last_name,birth,age):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.birth=birth
         self.age=age
-        self.coutry=country
-    def greet(self):
-        return f"hello{self.name}, welcome  to{self.school},how is {self.country} "
-    def __init__(self,full_name,last_name,birth):
-        
+    def fullname(self):
+        name=self.first_name+self.last_name
+        return name
+    def short_name(self):
+        short= self.first_name [0].split()+self.last_name[0].split()
+        return short
