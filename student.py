@@ -11,3 +11,6 @@ class Student:
     def short_name(self):
         short= self.first_name [0].split()+self.last_name[0].split()
         return short
+    def year(self,current_year):
+        birthdate=current_year-self.age
+        return birthdate   
