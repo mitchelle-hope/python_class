@@ -1,10 +1,10 @@
 class Account:
-    school="AkiraChix"
+    # school="AkiraChix"
     def __init__(self,name,number,balance,amount):
         self.name=name
         self.number=number
-        self.balance=balance
-        self.amount=amount
+        self.balance=0
+        # self.amount=amount
     def deposit(self):
         self.balance+=self.amount
         return self.balance
