@@ -1,36 +1,40 @@
-def greet(name,age):
- year=2022-age
- return f"Hello {name} you were born in {year}"
-
- 
-
-def my_country(name, country="Kenya" ):
-    return f"hello {name}from {country}" 
- 
-def hello(name):
-     return f"hello {name}"
-
-def hello_multi(*names):
-    print(names)
-
-def greet_multi (**kwargs):
-    keys=kwargs.keys()
-    if"name" in keys:
-        print("Hello{kwargs}['name']}")
-    elif "country"in keys:  
-        print("hello from{kwargs['country' ")
+class Account:
+  def __init__(self,account_name,account_number ):
+    self.account_name=account_name
+    self.account_number=account_number
+    self.balance=0
+    self.deposits=[]
+    self.withdrawals=[]
+  def deposit(self,amount):
+    self.deposits.append(amount)
+  
+    if amount<=0:
+      return f"hello{self.account_name}you have deposited {amount}and your new balance is {self.balance}"
     else:
-               print("hello anonymous")
-def  sum_and_greet(*args,**kwargs): 
-     print(args)
-     print(kwargs)
+      self.balance+=amount
+    return f"You have deposited {self.balance}"
 
+  def withdraw(self,amount):
+    self.withdrawals.append(amount)
+    self.transaction=100
+    if amount>self.balance:
+      return f"your balance is {self.balance}you cant withdraw{amount}"
+    elif amount>self.balance:
+      return f"you cannot withdraw{amount}."
+  
+    else:
+      self.balance-=amount+self.transaction
+      return f"hello{self.account_name},you have withdrawn{amount}your balance is {self.balance}your withdrarals are {self.withdrawals}"
+  def deposit_stmnt(self):
+      for depo in self.deposits:
+       print(depo, end="/n")
+
+  def withdrawals_stmnt(self):
+      for drawals in self.withdrawls:
+         print(drawals,end="/n")
+  def current_balance(self):
+      return self.balance
+
+
+   
      
-     def details_multi (*args,**kwargs):
-        multiply=1
-        for num in args:
-            multiply*=num
-            print(multiply)
-     print(f"Hello{kwargs}")
-
- 
